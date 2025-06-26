@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "ooc-core"
+version = "0.1.0"
+description = "Object-Oriented Consciousness Core Library"
+authors = ["Твоё имя или ник"]
+readme = "README.md"
+packages = [{ include = "ooc", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110"
+uvicorn = "^0.27"
+typer = "^0.9"
+pydantic = "^2.6"
+python-dotenv = "^1.0"
+pytest = "^8.3.5"
+httpx = "^0.28.1"
+pydantic-settings = "^2.9.1"
+
+[tool.poetry.scripts]
+ooc = "ooc.cli.main:app"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
